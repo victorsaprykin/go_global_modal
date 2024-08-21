@@ -1,0 +1,157 @@
+.faq {
+  padding-top: 50px;
+}
+
+.faq__title {
+  margin-bottom: 44px;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.faq__item {
+  padding: 21px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1c1a1a;
+  background-color: var(--main-color);
+}
+
+
+.faq__item::after,
+.faq__item:nth-child(even)::after {
+  content: '';
+  background-repeat: no-repeat;
+  background-position: right center;
+  display: block;
+  width: 46px;
+  height: 46px;
+  transition: 0.3s;
+}
+
+
+
+.faq__item:nth-child(even) {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+}
+
+.faq__item:nth-child(even)::after {
+  background-image: url('../img/icons/plus-white.svg');
+}
+
+.faq__item:nth-child(even):hover::after {
+  background-image: url('../img/icons/plus-white--hover.svg');
+}
+
+.faq__item:nth-child(even):active::after {
+  background-image: url('../img/icons/minus-white.svg');
+}
+
+
+
+.faq__item::after {
+  background-image: url('../img/icons/plus-colored.svg');
+}
+
+.faq__item:hover::after {
+  background-image: url('../img/icons/plus-colored--hover.svg');
+}
+
+.faq__item:active::after {
+  background-image: url('../img/icons/minus-colored.svg');
+}
+
+@media (max-width: 1024px) {
+  .faq {
+    padding-top: 28px;
+  }
+
+  .faq__title {
+    margin-bottom: 29px;
+  }
+
+  .faq__item {
+    padding: 10px 20px 10px 28px;
+    font-size: 20px;
+  }
+
+  .faq__item:last-child {
+    display: none;
+  }
+
+  .faq__item:nth-child(even) {
+    background-color: var(--main-color);
+    color: #1c1a1a;
+  }
+
+  .faq__item:nth-child(even)::after {
+    background-image: url('../img/icons/plus-colored.svg');
+  }
+
+  .faq__item:nth-child(even):hover::after {
+    background-image: url('../img/icons/plus-colored--hover.svg');
+  }
+
+  .faq__item:nth-child(even):active::after {
+    background-image: url('../img/icons/minus-colored.svg');
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding-top: 18px;
+  }
+
+  .faq__item {
+    padding: 10px 85px 10px 50px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 584px) {
+  .faq__item {
+    padding: 10px 14px 10px 17px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding-bottom: 30px;
+  }
+
+  .faq__list {
+    gap: 10px;
+  }
+
+  .faq {
+    padding-top: 10px;
+  }
+
+  .faq__item {
+    padding: 0;
+    padding-left: 17px;
+    padding-right: 17px;
+    max-width: 100%;
+    height: 46px;
+    font-size: 12px;
+  }
+  
+  .faq__item::after {
+    background-size: 30px 30px;
+  }
+
+  .faq__title {
+    margin-bottom: 14px;
+  }
+}

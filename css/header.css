@@ -1,0 +1,130 @@
+.header {
+  padding-top: 30px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.navigation__link {
+  position: relative;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 2.27273;
+  text-transform: uppercase;
+}
+
+.navigation__link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-border);
+  transition: 0.3s linear;
+}
+
+.navigation__link:hover::before,
+.navigation__link:focus::before {
+  left: 0;
+  width: 100%;
+}
+
+.header__btn {
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--main-color);
+  line-height: 1.36364;
+  text-transform: uppercase;
+  border: 3px solid var(--accent-border);
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header__btn:hover,
+.header__btn:focus {
+  background-color: var(--accent-btn);
+  border: 3px solid var(--accent-btn);
+}
+
+.header__btn:active {
+  padding: 14px 34px;
+  background-color: #640aa3;
+  border: 1px solid #000;
+}
+
+@media (max-width: 1280px) {
+  .navigation__link {
+    font-size: 18px;
+  }
+
+   .navigation__list {
+    gap: 20px;
+  }
+
+    .header__btn {
+    padding: 10px 26px;
+    font-weight: 700;
+    font-size: 18px;
+   }
+
+  .header__btn:active {
+  padding: 12px 28px;
+}
+
+}
+
+@media (max-width: 1050px) {
+  .header {
+    padding-top: 22px;
+  }
+
+  .navigation {
+    margin-right: 48px;
+  }
+}
+
+@media (max-width: 896px) {
+  .header {
+    padding-top: 30px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation__list {
+    display: none;
+  }
+}
+
+@media (max-width: 656px) {
+  .header {
+    padding-top: 20px;
+  }
+
+  .logo {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__btn {
+    display: none;
+  }
+  
+  .logo {
+    margin-right: 0;
+  }
+}
