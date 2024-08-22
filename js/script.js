@@ -13,11 +13,11 @@ modalBtn.click(function() {
 modalClose.click(function() {
   overlay.hide(500);
   modal.css({ opacity: '0' });
-  body.removeClass('.noscroll');
+  body.removeClass('noscroll');
 });
 
 overlay.click(function() {
   overlay.hide(500);
   modal.css({ opacity: '0' });
-  body.removeClass('.noscroll');
+  body.removeClass('noscroll');
 });
